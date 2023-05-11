@@ -1,20 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {StatusBar, StyleSheet, Text, View } from 'react-native';
+import WelcomeScreen from './src/screens/WelcomeScreen';
+import LoginScreen from './src/screens/LoginScreen';
+import HomeScreen from './src/screens/HomeScreen';
+import RootNavigator from './src/navigations/RootNavigators';
 
 export default function App() {
+  const statusBarHeight = StatusBar.currentHeight || 0;
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    // {/* <WelcomeScreen/> */}
+    //  {/* <LoginScreen/> */}
+  //  <View  style={{paddingTop: statusBarHeight }}>
+  //      <HomeScreen />
+  //  </View>
+    <RootNavigator  />
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
+
+
